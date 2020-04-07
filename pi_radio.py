@@ -9,6 +9,7 @@ try:
 except ImportError:
     import Tkinter as tk
     from Tkinter import filedialog
+    from Tkinter import END
 
 
 
@@ -83,7 +84,9 @@ def file_dialog(b):
     sel_file_label = tk.Label(b,
                               text="",
                               bg=back_color,
-                              highlightthickness=0)
+                              highlightthickness=0,
+                              width=20,
+                              )
     sel_file_label.place(x=20,y=40)
     b.update()
     file_path = filedialog.askopenfilename(initialdir=def_dir, title="", filetypes=(
@@ -113,10 +116,10 @@ def settings(_fst=0):
     def apply(a,b,d,c):
         nonlocal _fst
 
-        if a == "":
-            a = "100.0"
-        if b == "":
-            b = "0.0"
+        if a == "" or a == "Not Set":
+            a = "108.0"
+        if b == "" or b == "Not Set":
+            b = "80.0"
         if float(a) <= float(b):
             c.destroy()
             display("Invalid Range")
@@ -240,7 +243,6 @@ def main_menu():
     menubar.add_cascade(label="Menu", menu=menu1)
     menubar.add_cascade(label="Settings", menu=menu2)
     root.config(menu=menubar)
-    #file = file_dialog(initial_dir)
     file_label = tk.Label(root,
                           text='File:',
                           font=("Courier", 10),

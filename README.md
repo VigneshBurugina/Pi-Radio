@@ -7,8 +7,8 @@ Requirements
 --------------
 
 Things you'll need:
-    A Raspberry Pi
-    An Antenna
+A Raspberry Pi
+An Antenna
 
 -------------
 Instructions

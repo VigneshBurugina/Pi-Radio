@@ -1,5 +1,6 @@
+--------
 Pi Radio
-
+--------
 Transmit audio files (.wav or .mp3) via FM and listen to your music anywhere near you!
 
 --------------
@@ -8,7 +9,7 @@ Requirements
 
 Things you'll need:
 A Raspberry Pi
-An Antenna
+and an Antenna
 
 -------------
 Instructions

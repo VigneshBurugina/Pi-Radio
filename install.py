@@ -74,11 +74,14 @@ def ask(a, b="Error!", c='200x100', d=(60, 60)):
     return
 
 def install(a):
-    os.system("wget http://omattos.com/pifm.tar.gz")
-    os.system("tar -xvf pifm.tar.gz")
-    os.system("rm pifm.tar.gz")
-    os.system("apt-get install ffmpeg")
-    display("Installation\nFinished")
+    try:
+        os.system("wget http://omattos.com/pifm.tar.gz")
+        os.system("tar -xvf pifm.tar.gz")
+        os.system("rm pifm.tar.gz")
+        os.system("apt-get install ffmpeg")
+    except Exception:
+        display("Installation\nFailed")
+    display("Installation\nFinished","Pi Radio")
     a.restroy()
     ask()
     
